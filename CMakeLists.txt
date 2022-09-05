@@ -3,8 +3,7 @@ project (depend)
 
 
 function(fetch_depends listpath)
-	message("Fetch dependencies from:")
-	message(listpath)
+	message("Fetch dependencies from: ${listpath}")
 	IF(EXISTS ${listpath})
 		FILE(STRINGS ${listpath} DEPENDLIST)
 		list(REMOVE_DUPLICATES DEPENDLIST)
